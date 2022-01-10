@@ -11,10 +11,12 @@
     <a-scene mindar-image="imageTargetSrc: targets.mind;" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
         <a-assets>
             <img id="card" src="Assets\motiontest-0-Enhanced-Animated.gif" />
-            <a-asset-item response-type="arraybuffer" id="avatarModel" src="Assets\Intergalactic_Spaceship-(stl ASCII).stl"></a-asset-item>
+            <!-- <a-asset-item response-type="arraybuffer" id="avatarModel" src="Assets\Intergalactic_Spaceship-(stl ASCII).stl"></a-asset-item> -->
+            <a-asset-item id="tree-obj" src="Assets\obj\Wolf_One_obj.obj"></a-asset-item>
+            <a-asset-item id="tree-mtl" src="Assets\obj\Wolf_One_obj.mtl"></a-asset-item>
         </a-assets>
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
-      <a-entity mindar-image-target="targetIndex: 0" stl-model="src: #avatarModel" scale="0.02 0.02 0.02" ></a-entity>
+      <!-- <a-entity mindar-image-target="targetIndex: 0" stl-model="src: #avatarModel" scale="0.02 0.02 0.02" ></a-entity> -->
       
       <!-- <a-entity id="nyancat" geometry="primitive:box" position="1.2 1.5 1.5" material="shader:gif;src:url(Assets\image.png);transparent:true;opacity:.4;" gif=""></a-entity> -->
       <!-- <a-entity id="nyancat" geometry="primitive:box" position="1.2 1.5 1.5" material="shader:gif;src:url(Assets\image.png);transparent:true;opacity:.4;" gif=""></a-entity> -->
@@ -22,6 +24,10 @@
       <!-- <a-entity mindar-image-target="targetIndex: 0">
         <a-plane src="#giftest" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane> detached
       </a-entity> -->
+      <!-- <a-entity mindar-image-target="targetIndex: 0">
+        <a-gltf-model rotation="0 0 0 " position="0 0 0.1" scale="0.005 0.005 0.005" src="#avatarModel" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate">
+      </a-entity> -->
+      <a-entity obj-model="obj: #tree-obj; mtl: #tree-mtl" rotation="0 0 0 " position="0 0 0.1" scale="0.005 0.005 0.005" ></a-entity>
     </a-scene>
   </body>
 </html>
